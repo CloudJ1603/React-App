@@ -1,5 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Neucha&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Neucha&display=swap");
 
 .App {
   width: 100vw;
@@ -16,7 +15,7 @@
   font-size: 40px;
   margin: 30px 0;
   color: white;
-  z-index: 1;      /*always at top*/
+  z-index: 1;
   text-align: center;
 }
 
