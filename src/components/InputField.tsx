@@ -11,13 +11,15 @@ interface Props {
   It ddestructures the 'todo', 'setTodo' and 'handleAdd' props from 'Props' object, allowing 
   use them within the component's logic. 
 */ 
-const InputField:React.FC<Props> = ({todo, setTodo, handleAdd}: Props) => {
+const InputField: React.FC<Props> = ({todo, setTodo, handleAdd}: Props) => {
   
   // 
   const inputRef = useRef<HTMLInputElement>(null);
   
   return (
-    <form className = "input" onSubmit={(e) => {
+    <form 
+    className = "input" 
+    onSubmit={(e) => {
       handleAdd(e);
       /* 
         After calling 'handleAdd', the code accesses the 'current' property of the 'inputRef' object.
@@ -28,7 +30,7 @@ const InputField:React.FC<Props> = ({todo, setTodo, handleAdd}: Props) => {
     }}>
         <input 
           ref = {inputRef}
-          type = "input" 
+          type = "text" 
           value={todo}
           /* when the input value changed, the function is executed
           and update the 'todo' state with new value provided by 'e.target.value'*/
@@ -40,7 +42,7 @@ const InputField:React.FC<Props> = ({todo, setTodo, handleAdd}: Props) => {
             Go
         </button>
     </form>
-  )
-}
+  );
+};
 
 export default InputField
